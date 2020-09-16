@@ -1,0 +1,693 @@
+
+
+/* Start:/bitrix/templates/spa/components/bitrix/menu/tree1/style.min.css?1529496266747*/
+div.menu-sitemap-tree{font-size:100%}div.menu-sitemap-tree ul{list-style-type:none;margin:0;padding:0 1em 0 0}div.menu-sitemap-tree ul ul{width:auto;margin:-0.75em 0 0 0;padding:0 0 0 .75em}div.menu-sitemap-tree li{margin:0 0 -0.85em 0;padding:0}div.menu-sitemap-tree li li{margin:0 0 -0.85em .5em;padding:0}div.menu-sitemap-tree li.menu-close ul{display:none}div.menu-sitemap-tree div.item-text{position:relative;top:-19px;left:19px}div.folder,div.page{background-repeat:no-repeat;width:17px;height:17px;vertical-align:top}div.folder{cursor:pointer;cursor:hand;background-image:url("")}div.menu-sitemap-tree li.menu-close div.folder{background-image:url("")}div.page{background-image:url("")}
+/* End */
+
+
+/* Start:/bitrix/templates/spa/styles.css?15294962668627*/
+*{
+margin:0px;
+padding:0px;
+}
+
+
+
+body, html{ font-size: 100%; 	padding: 0; margin: 0;  height: 100%;}
+
+body{
+	background: #fff;
+	color: #754C24;
+	font-weight: 100;
+	font-size: 0.95em;
+	font-family: "Myriad Pro";
+/*	min-height:750px;*/
+   
+}
+.wrapper{height: 100%;
+
+}
+a {
+    color: #ED1C24;
+    text-decoration: none;
+}
+a:hover {
+    color: #ED1C24;
+    text-decoration: none;
+}
+
+/*p {
+margin: 30px 20px 20px 20px;
+
+} */
+p {
+margin: 0 20px 0 20px;
+
+}
+.logo{
+	    margin-left: 40px;	
+	}
+/*
+
+ */
+.jquery-accordion-menu-footer ul {
+	width: 100%;
+	padding-left: 30px;
+	padding-top: 50px;
+	float: left;
+        list-style-type: none;
+}
+ 
+.jquery-accordion-menu-footer a {
+    color: #808080;
+	text-decoration: none;
+	
+
+}
+
+.jquery-accordion-menu-footer a:hover {
+    color: #ED1C24;
+}
+
+.jquery-accordion-menu-footer li {      
+
+
+}      
+
+
+.ink {
+	display: block;
+	position: absolute;
+	background: rgba(255,255,255,.3);
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0)
+}
+
+.animate-ink {
+	-webkit-animation: ripple .5s linear;
+	-moz-animation: ripple .5s linear;
+	-ms-animation: ripple .5s linear;
+	-o-animation: ripple .5s linear;
+	animation: ripple .5s linear
+}
+
+@-webkit-keyframes ripple {
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(2.5)
+	}
+}
+
+@-moz-keyframes ripple {
+	100% {
+		opacity: 0;
+		-moz-transform: scale(2.5)
+	}
+}
+
+@-o-keyframes ripple {
+	100% {
+		opacity: 0;
+		-o-transform: scale(2.5)
+	}
+}
+
+@keyframes ripple {
+	100% {
+		opacity: 0;
+		transform: scale(2.5)
+	}
+}
+
+.left_side{
+
+	width:280px;/*ширина меню*/
+	margin:30px auto;
+}
+
+/*стили поисковой строки*/
+.filterinput{
+	background-color:rgba(249, 244, 244, 0);
+	border-radius:15px;
+	width:90%;
+	height:30px;
+	border:thin solid #FFF;
+	text-indent:0.5em;
+	font-weight:bold;
+	color:#FFF;
+}
+/*конец*/
+.topheader{ 
+	width: 100%;
+	background-color:#DEC79E;
+	font-family: "Cassandra";
+	font-size:24px;
+	padding-left: 30px;
+	color: #754C24;
+	
+	
+	
+	}
+	
+h1 {
+	font-size: 2.1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	display:inline-block;
+	padding-left:2.1rem;
+	padding-top:1.1rem;
+	margin-right: 10px;
+	}
+
+h2{ color: #754C24;
+	font-size:1.5rem;
+}
+	
+
+.marker	{
+	border-left: dotted 7px #DEC79E;
+	padding-left:1.1rem;
+
+	}
+	
+	
+	hr {
+    border: none; /* Убираем границу */
+    background-color:  #DEC79E;; /* Цвет линии */
+    color:  #DEC79E;; /* Цвет линии для IE6-7 */
+    height: 1rem; /* Толщина линии */
+	display:inline-block;
+	width:40px;
+	margin-top:0.5rem;
+	margin-bottom:0.2rem;
+	margin-right: 0.5rem;
+   }
+	
+#demo-list a{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+	width:100%;
+	/*zima*/
+	align-items: flex-start;
+    flex-direction: row;
+    display: flex;
+	padding-left: 35px;
+}
+
+/** 
+/* Формируем базовый контейнер аккордеона 
+*/
+.accordion_list {
+    width: 100%;
+
+/*
+ширина произвольная выбирается
+*в зависимости от места размещения 
+*/
+   /* max-width: 600px;*/
+    min-height: 0;
+    display: block;
+/* относительное позиционирование */
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+/*	padding-left: 30px;*/
+    background-color: #fff;
+    overflow: hidden;
+}
+/* заголовки панелей аккордеона */
+.accordion_list h3 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0;
+    padding: 0.5rem 0;
+    cursor: pointer;
+	font-size: 1.1rem;
+
+}
+/* заголовки панелей аккордеона при наведении
+* в данном варианте не срабатывает
+*/
+/* .accordion_list h3:hover {
+    display: block;
+    background-color: #005049;
+}
+*/
+ 
+/* Формируем блоки с содержанием */
+.msg {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  border-left: dotted 7px #DEC79E;
+}
+ 
+/* оформляем параграфы */
+.msg p {
+  /*color: rgba(48, 69, 92, 0.8);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;*/
+  padding: 0 10px;
+  left:50px;
+
+}
+ 
+/* Позаботимся о небольших экранах */
+@media (max-width: 550px) {
+  .accordion_list {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+   /* min-height: 100%;  */
+    margin: 0;
+    left: 0;
+}
+    } 
+ 
+/* Формируем неупорядоченный список */
+.accordion_list ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* Определяем и формируем отдельный элемент списка 
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+
+.accordion_list ul  {
+	padding: 0;
+  	margin: auto 10px auto 50px ;
+
+}
+.accordion_list ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* устанавливаем время ожидания перед воспроизведением анимации 
+ * на основе нумерации в дереве элементов
+*/
+.accordion_list ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion_list ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion_list ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion_list ul li:last-of-type {
+  padding-bottom: 0;
+}
+ 
+/* Сформируем  указатель переключения состояния аккордеона */
+.accordion_list ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+/* расположим указатель на панели заголовка справа */
+  right: 25px;
+}
+
+ 
+/* "Рисуем " сам указатель */
+.accordion_list ul li i:before, .accordion_list ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  width: 3px;
+  height: 9px;
+}
+/* Добавляем элемент трансформации указателя при переключении */
+.accordion_list ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion_list ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+ 
+/* Делаем чекбокс скрытым*/
+.accordion_list ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+/* Когда у флажка установлен checked  
+ * блок с содержанием скрыт
+*/
+.accordion_list ul li input[type=checkbox]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+ /* transform: translate(0, 50%);*/
+}
+/* А указатель показывает вниз */
+.accordion_list ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion_list ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя 
+*/
+div.msg, ul li i:before, ul li i:after {
+   transition: all 0.9s ease-in-out;
+}
+/**
+ * Изображения внутри аккордеона
+ * ...сделаем их отзывчивыми
+ */
+/*.accordion_list .msg img {
+    width: 100%;
+    height: auto;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+ 
+/* полноразмерная картинка 
+.msg img .large-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* миниатюра слева 
+ .msg img.img-left {
+    width: 25%;
+    float:left;
+    margin:5px 15px 5px 0;
+}
+/* миниатюра справа 
+.msg img.img-right {
+    width: 25%;
+    float:right;
+    margin:5px 0 5px 15px;
+}
+ 
+/* Встраиваемое видео */
+
+
+.point-faq{
+   margin: 0 20px 0 20px;
+   list-style-type: none;
+
+}
+
+.video-responsive {
+    margin: 20px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* Предусмотри использование кода встраиваемого видео
+ *через iframe, object или embed */
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.news-date-time {
+    color: #754C24;
+
+}
+
+.footer-contacts{
+    width: 280px;		
+    bottom: 0px;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;	
+	}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.adress{
+  font-weight: bold;
+
+}
+/* End */
+
+
+/* Start:/bitrix/templates/spa/template_styles.css?15294962665263*/
+div.product-list {
+    overflow: hidden;
+}
+div.product {
+    overflow: hidden;
+    width: 280px;
+    height: 105px;
+    margin: 0 25px 20px 0;
+    position: relative;
+    float: left;
+}
+
+
+div.product-image {
+    width: 250px;
+    height: 105px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* 
+/* Формируем базовый контейнер аккордеона 
+*/
+.accordion_first {
+    width: 100%;
+
+/*
+ширина произвольная выбирается
+*в зависимости от места размещения 
+*/
+    max-width: 600px;
+    min-height: 0;
+    display: block;
+/* относительное позиционирование */
+    position: relative;
+    margin: 0 auto;
+    /*padding: 0;*/
+		padding-left: 30px;
+    background-color: #fff;
+    overflow: hidden;
+}
+/* заголовки панелей аккордеона */
+.accordion_first h3 {
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0;
+    padding: 0.5rem 0;
+    cursor: pointer;
+	font-size: 1.1rem;
+
+}
+/* заголовки панелей аккордеона при наведении
+* в данном варианте не срабатывает
+*/
+/* .accordion_first h3:hover {
+    display: block;
+    background-color: #005049;
+}
+*/
+ 
+/* Формируем блоки с содержанием */
+.msg {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+ /* border-left: dotted 7px #DEC79E;*/
+}
+ 
+/* оформляем параграфы */
+.msg p {
+  /*color: rgba(48, 69, 92, 0.8);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;*/
+  padding: 0 10px;
+  left:50px;
+
+}
+ 
+/* Позаботимся о небольших экранах */
+@media (max-width: 550px) {
+  .accordion_first {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+} 
+ 
+/* Формируем неупорядоченный список */
+.accordion_first ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* Определяем и формируем отдельный элемент списка 
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+.accordion_first ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+ 
+/* устанавливаем время ожидания перед воспроизведением анимации 
+ * на основе нумерации в дереве элементов
+*/
+.accordion_first ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion_first ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion_first ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion_first ul li:last-of-type {
+  padding-bottom: 0;
+}
+ 
+/* Сформируем  указатель переключения состояния аккордеона */
+.accordion_first ul li i {
+  position: absolute;
+ /* transform: translate(-6px, 0);*/
+  margin-top: 8px;
+/* расположим указатель на панели заголовка справа */
+  left: -10px;
+}
+ 
+/* "Рисуем " сам указатель */
+/*.accordion_first ul li i:before,*/ .accordion_first ul li i:after {
+  content: "\f0d7";
+  color:   #ED1C24;
+ position: absolute;
+  /*background-color: #B3B3B3;*/
+  /*width: 3px;*/
+ /* height: 9px;*/
+}
+/* Добавляем элемент трансформации указателя при переключении */
+.accordion_first ul li i:before {
+/*  transform: translate(-2px, 0) rotate(45deg); */
+}
+.accordion_first ul li i:after {
+/* transform: translate(2px, 0) rotate(-90deg);*/
+}
+ 
+/* Делаем чекбокс скрытым*/
+.accordion_first ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+/* Когда у флажка установлен checked  
+ * блок с содержанием скрыт
+*/
+.accordion_first ul li input[type=checkbox]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+ /* transform: translate(0, 50%);*/
+}
+/* А указатель показывает вниз */
+.accordion_first ul li input[type=checkbox]:checked ~ i:before {
+ /* transform: translate(2px, 0) rotate(45deg);*/
+}
+.accordion_first ul li input[type=checkbox]:checked ~ i:after {
+ /* transform: translate(-2px, 0) rotate(-45deg);*/
+-ms-transform:  scale(1, -1);
+	-moz-transform:  scale(1, -1);
+	-webkit-transform:  scale(1, -1);
+	transform: scale(1, -1);
+  color: #B3B3B3;
+
+}
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя 
+*/
+div.msg, ul li i:before, ul li i:after {
+   transition: all 0.9s ease-in-out;
+}
+/**
+ * Изображения внутри аккордеона
+ * ...сделаем их отзывчивыми
+ */
+/*.accordion_first .msg img {
+    width: 100%;
+    height: auto;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}     */
+ 
+/* Полоса прокрутки */
+::-webkit-scrollbar-button {
+background-image:url("");
+background-repeat:no-repeat;
+width:4px;
+height:0px
+}
+
+::-webkit-scrollbar{
+width: 4px;
+}
+
+
+
+
+
+/* End */
+/* /bitrix/templates/spa/components/bitrix/menu/tree1/style.min.css?1529496266747 */
+/* /bitrix/templates/spa/styles.css?15294962668627 */
+/* /bitrix/templates/spa/template_styles.css?15294962665263 */
